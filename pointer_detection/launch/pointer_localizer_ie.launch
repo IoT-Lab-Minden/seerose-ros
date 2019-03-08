@@ -1,5 +1,11 @@
 <launch>
 	<arg name="cam_ns" default="camera"/>	
+	<arg name="pi/2" value="1.5707963267948966" />
+	<arg name="optical_rotate" value="0 0 0 -$(arg pi/2) 0 -$(arg pi/2)" />
+	<!-- TODO: Define the transform between the camera and the global map coordinate frame.
+	<node pkg="tf" type="static_transform_publisher" name="$(arg cam_ns)_base_link" args="1.96 1.54 2.95 $(arg pi/2) $(arg pi/2) 0 map $(arg cam_ns)_link 100" /> 
+	<node pkg="tf" type="static_transform_publisher" name="camera_broadcaster" args="$(arg optical_rotate) $(arg cam_ns)_link $(arg cam_ns)_optical_frame 100" />
+	-->
 	<node pkg="pointer_detection" type="pointer_localizer_ie" name="pointer_localizer_ie" output="screen" >  	
   		<param name="input_rgb_topic" type="string" value="/$(arg cam_ns)/usb_cam/image_raw" />
 		<param name="rgb_camera_info_topic" type="string" value="/$(arg cam_ns)/usb_cam/camera_info" />		
