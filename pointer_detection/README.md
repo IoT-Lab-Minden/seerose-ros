@@ -1,13 +1,13 @@
 ## pointer_detection
 
-This package provides ROS nodes for the detection and localization of laser spots on the ground plane. There are two variants of the detection and localization algorithm:
+This package provides ROS nodes for the detection and localization of laser spots on the ground plane. The algorithm does not require a certain color of the laser spot, but it should be significantly brighter than its surrounding. There are two variants of the detection and localization algorithm:
 
 1. The location of the laser spot w.r.t. the camera coordinate frame is determined using an additional depth sensor. Thus, this method is intended to be used on mobile platforms with a RGB-D sensor (node: pointer_localizer_robot).
 2. The location of the laser spot w.r.t. the camera coordinate frame is determined using a ground plane model assuming a static camera pose. Thus, no additional depth sensor is necessary.  In order to work, the camera's transformation w.r.t. the global coordinate frame needs to be known. This method is intended to be used on static cameras integrated into smart environments (node: pointer_localizer_ie).
 
 In both cases, the camera intrinsic parameters need to be known to work properly.
 
-![Example Images](/images/screenshot.PNG)
+![Example Images](images/screenshot.PNG)
 
 ### Nodes
 
@@ -19,7 +19,7 @@ In both cases, the camera intrinsic parameters need to be known to work properly
 
      /camera/depth_registered/image_raw ([sensor_msgs/Image](http://docs.ros.org/api/sensor_msgs/html/msg/Image.html))
 
-     /camera/rgb/camera_info [sensor_msgs/CameraInfo](http://docs.ros.org/api/sensor_msgs/html/msg/CameraInfo.html)
+     /camera/rgb/camera_info ([sensor_msgs/CameraInfo](http://docs.ros.org/api/sensor_msgs/html/msg/CameraInfo.html))
 
    - Published topics
 
@@ -41,7 +41,7 @@ In both cases, the camera intrinsic parameters need to be known to work properly
 
      /camera/rgb/image_raw ([sensor_msgs/Image](http://docs.ros.org/api/sensor_msgs/html/msg/Image.html))
 
-     /camera/rgb/camera_info [sensor_msgs/CameraInfo](http://docs.ros.org/api/sensor_msgs/html/msg/CameraInfo.html)
+     /camera/rgb/camera_info ([sensor_msgs/CameraInfo](http://docs.ros.org/api/sensor_msgs/html/msg/CameraInfo.html))
 
    - Published topics
 

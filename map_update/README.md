@@ -8,7 +8,7 @@ This package provides a ROS node to integrate virtual borders into an occupancy 
 
 The resulting posterior map (after integrating a virtual border) can be used in future navigation tasks as basis for a costmap to change the robot's navigational behavior.
 
-![Example Images](/images/map_update.png)
+![Example Images](images/map_update.png)
 
 ### Nodes
 
