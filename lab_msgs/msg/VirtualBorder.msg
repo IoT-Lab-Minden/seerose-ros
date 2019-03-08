@@ -1,0 +1,3 @@
+geometry_msgs/PolygonStamped border
+geometry_msgs/PointStamped seedPoint
+uint8 semantic

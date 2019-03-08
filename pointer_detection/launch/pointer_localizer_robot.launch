@@ -1,0 +1,8 @@
+<launch>
+	<arg name="camera" default="robot" />
+	<node pkg="pointer_detection" type="pointer_localizer_robot" name="pointer_localizer_robot" output="screen" >  	
+		<param name="input_rgb_topic" type="string" value="/$(arg camera)/rgb/image_raw" />
+		<param name="input_depth_topic" type="string" value="/$(arg camera)/depth_registered/image_raw" />
+		<param name="rgb_camera_info_topic" type="string" value="/$(arg camera)/rgb/camera_info" />
+	</node>
+</launch>

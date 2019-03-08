@@ -1,0 +1,12 @@
+float64 gaussian_a
+float64 gaussian_b
+float64 gaussian_c
+float64 gaussian_amplitude
+float64 gaussian_theta
+float64 gaussian_x0
+float64 gaussian_y0
+
+---
+CameraProbability[] found_objects
+string uuid
+

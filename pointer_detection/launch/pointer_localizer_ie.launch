@@ -1,0 +1,7 @@
+<launch>
+	<arg name="cam_ns" default="camera"/>	
+	<node pkg="pointer_detection" type="pointer_localizer_ie" name="pointer_localizer_ie" output="screen" >  	
+  		<param name="input_rgb_topic" type="string" value="/$(arg cam_ns)/usb_cam/image_raw" />
+		<param name="rgb_camera_info_topic" type="string" value="/$(arg cam_ns)/usb_cam/camera_info" />		
+  	</node>
+</launch>

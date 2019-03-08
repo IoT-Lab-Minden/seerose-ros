@@ -1,0 +1,6 @@
+geometry_msgs/PolygonStamped border
+geometry_msgs/PointStamped seedPoint
+uint8 semantic
+---
+bool success   # indicate successful run of triggered service
+string message # informational, e.g. for error messages

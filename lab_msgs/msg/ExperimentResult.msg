@@ -1,0 +1,4 @@
+uint8 marker_id
+geometry_msgs/Point object_position
+geometry_msgs/Point pointing_position
+float32 runtime

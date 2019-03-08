@@ -1,0 +1,5 @@
+string id
+string uuid
+bool cancel
+---
+geometry_msgs/PolygonStamped polygon
